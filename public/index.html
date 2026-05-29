@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview AI Tutor</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="chat-shell" aria-label="Interview AI Tutor">
+        <header class="header">
+          <div>
+            <p class="eyebrow">Voice interview prep</p>
+            <h1>Interview AI Tutor</h1>
+          </div>
+          <div class="selectors">
+            <select id="stack" aria-label="Interview topic">
+              <option value="React frontend">React frontend</option>
+              <option value="Node backend">Node backend</option>
+              <option value="Full-stack">Full-stack</option>
+              <option value="System design">System design</option>
+              <option value="Data structures">Data structures</option>
+            </select>
+            <select id="voiceSelect" aria-label="Interviewer voice">
+              <option value="">Default voice</option>
+            </select>
+          </div>
+        </header>
+
+        <div class="messages" id="messages" aria-live="polite">
+          <article class="message tutor">
+            <span>AI Tutor</span>
+            <p>Hi. Pick a topic and press Start. I will ask one interview question at a time, listen to your answer, and coach you out loud.</p>
+          </article>
+        </div>
+
+        <form class="composer" id="composer">
+          <button class="mic-button" id="micButton" type="button" aria-label="Start or stop voice input">
+            <span class="mic-icon"></span>
+          </button>
+          <textarea id="answerInput" rows="2" placeholder="Speak or type your answer..."></textarea>
+          <button id="sendButton" type="submit">Send</button>
+        </form>
+
+        <footer class="footer">
+          <button id="startButton" type="button">Start</button>
+          <button id="resetButton" type="button" class="ghost">Reset</button>
+          <p id="statusText">Ready.</p>
+        </footer>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
