@@ -27,13 +27,13 @@ I wanted to combine browser-native voice APIs with a modern LLM in a tight feedb
 
 ---
 
-## How to Run It
+## 🚀 Live Demo
 
-**Live demo:** deployed on Vercel — no setup needed, open and start speaking.
-[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://ai-tutor-eight-gamma.vercel.app)
-**Application URL:** [https://ai-tutor-eight-gamma.vercel.app](https://ai-tutor-eight-gamma.vercel.app)
+Experience the application immediately—no setup required. Open the link, grant microphone permissions, and start speaking:
 
-> **Try it out:** No setup needed. Click the badge above to open the application and start speaking!
+*   **Application URL:** [https://ai-tutor-eight-gamma.vercel.app](https://ai-tutor-eight-gamma.vercel.app)
+*   **Deployment Status:** [![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://ai-tutor-eight-gamma.vercel.app)
+
 
 **Run locally:**
 
