@@ -1,14 +1,32 @@
-# Voice Interview Tutor
+# 🎙️ Voice Interview Tutor
 
-A voice-first mock interview coach that asks you real technical questions, listens to your spoken answers, and gives you immediate feedback — all in the browser, no installation required.
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-tutor-eight-gamma.vercel.app)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Made with Gemini](https://img.shields.io/badge/Built%20With-Gemini%202.5%20Flash-0061FF?style=for-the-badge&logo=google-gemini&logoColor=white)](https://deepmind.google/technologies/gemini/)
+
+A voice-first, browser-native mock interview coach that conducts real-time technical interviews. It listens to your spoken answers and provides immediate, actionable feedback—all in the browser with zero installation required.
+
+---
 
 ## What It Does
 
 Practicing for technical interviews alone is awkward — you can study concepts, but you can't rehearse *speaking out loud* without another person. Voice Interview Tutor fills that gap. Pick a topic (React frontend, Node backend, fullstack, system design or data structures ), press Start, and the AI interviewer asks one question at a time, listens as you speak, gives brief coaching on your answer, then moves to the next question. The entire loop — question, answer, feedback — happens through voice.
 
+---
+
 ## Why I Built This
 
+---
+
 I wanted to combine browser-native voice APIs with a modern LLM in a tight feedback loop. Interview prep was the right use case: the problem is real, the interaction is naturally conversational.
+
+### 🌟 Key Features
+*   **Zero-Latency Voice Loop:** Leverages browser-native speech recognition and synthesis for an instantaneous, conversational feel.
+*   **Gemini 2.5 Flash Integration:** Powered by Google's high-speed, context-aware LLM via an OpenAI-compatible proxy layer.
+*   **Context-Aware Coaching:** Dynamically adapts questions based on your previous answers while tracking conversational history.
+*   **Zero Setup Required:** Fully deployed and optimized for immediate use in the browser.
+
+---
 
 ## How to Run It
 
@@ -59,6 +77,8 @@ If `LLM_BASE_URL` is missing, the server returns a hardcoded coaching response i
 
 **What I changed:** swapped the LLM backend to Gemini 2.5 Flash, configured the Vercel deployment, and validated that the full voice loop worked end-to-end in a hosted environment.
 
+
+## What I would change with 4 more weeks, imagine shipping this to real users.
 
 **Structured per-answer feedback.** Right now coaching is freeform. A visible score on dimensions like clarity, specificity, and use of examples — updated after each answer — would make progress legible and give users something concrete to improve.
 
