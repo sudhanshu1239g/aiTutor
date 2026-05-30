@@ -1,7 +1,6 @@
 # 🎙️ Voice Interview Tutor
 
 [![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-tutor-eight-gamma.vercel.app)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Made with Gemini](https://img.shields.io/badge/Built%20With-Gemini%202.5%20Flash-0061FF?style=for-the-badge&logo=google-gemini&logoColor=white)](https://deepmind.google/technologies/gemini/)
 
 A voice-first, browser-native mock interview coach that conducts real-time technical interviews. It listens to your spoken answers and provides immediate, actionable feedback—all in the browser with zero installation required.
@@ -32,6 +31,7 @@ I wanted to combine browser-native voice APIs with a modern LLM in a tight feedb
 
 **Live demo:** deployed on Vercel — no setup needed, open and start speaking.
 [![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://ai-tutor-eight-gamma.vercel.app)
+**Application URL:** [https://ai-tutor-eight-gamma.vercel.app](https://ai-tutor-eight-gamma.vercel.app)
 
 > **Try it out:** No setup needed. Click the badge above to open the application and start speaking!
 
@@ -57,6 +57,8 @@ Open `http://localhost:5173`.
 
 > The server also supports any other OpenAI-compatible endpoint — swap `LLM_BASE_URL` and `LLM_MODEL` to point at a different provider with no other changes.
 
+---
+
 ## Architecture Decisions
 
 
@@ -69,6 +71,8 @@ Sending the full session history on every request would grow costs and latency a
 **Fallback response when no LLM is configured.**
 If `LLM_BASE_URL` is missing, the server returns a hardcoded coaching response instead of erroring. This lets you verify the UI and voice pipeline locally before you have an API key.
 
+---
+
 ## What I Used AI for
 
 **This project started from a template.** The core architecture — the Node server, static file serving, Web Speech API integration, and base UI — came from a starter. My contribution was wiring in the Gemini 2.5 Flash backend by adapting the LLM proxy to work with Google's OpenAI-compatible endpoint.
@@ -76,6 +80,8 @@ If `LLM_BASE_URL` is missing, the server returns a hardcoded coaching response i
 **What the template provided:** `server.js` structure, `app.js` voice loop, HTML/CSS layout, the `/api/tutor` route shape, and the JarvisLabs self-hosting docs.
 
 **What I changed:** swapped the LLM backend to Gemini 2.5 Flash, configured the Vercel deployment, and validated that the full voice loop worked end-to-end in a hosted environment.
+
+---
 
 
 ## What I would change with 4 more weeks, imagine shipping this to real users.
